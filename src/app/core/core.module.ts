@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { ToastrModule } from 'ngx-toastr';
-import { HttpClientModule } from '@angular/common/http';
 
-import { LayoutComponent, HeaderComponent } from './components';
-
+import { HeaderComponent, LayoutComponent } from './components';
+import { BaseModule } from 'shared/sub-modules/base/base.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +12,7 @@ import { LayoutComponent, HeaderComponent } from './components';
   ],
   imports: [
     CommonModule,
-    RouterModule,
-    HttpClientModule,
+    BaseModule,
     ToastrModule.forRoot(),
   ]
 })
