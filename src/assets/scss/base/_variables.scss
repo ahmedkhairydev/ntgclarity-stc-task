@@ -1,0 +1,42 @@
+:root {
+    --page-bg: rgba(229, 229, 229, 0.3);
+    --primary: #712C81;
+    --primary-light: rgba(var(--primary), 0.10);
+    --secondary: #DA3F7B;
+    --secondary-light: rgba(var(--secondary), 0.25);
+    --error: #EF4444;
+    --error-light: rgba(var(--error), 0.11);
+
+    --white: white;
+    --black: black;
+    --light: #F4F4F5;
+    --dark: #262834;
+    --text-light: #d9d9d9;
+    --middle: #7f8897;
+    --border-color: #e8e8e8;
+    --btn-disabled-bg: #e3e5ee;
+
+    --mdc-theme-primary: var(--primary);
+    --mdc-dialog-subhead-font: "Roboto";
+}
+
+$primary: var(--primary);
+$primary-light: var(--primary-light);
+
+$secondary: var(--secondary);
+$secondary-light: var(--secondary-light);
+
+$page-bg: var(--page-bg);
+$border-color: var(--border-color);
+$btn-disabled-bg: var(--btn-disabled-bg);
+
+$white: var(--white);
+$black: var(--black);
+$light: var(--light);
+$dark: var(--dark);
+
+$text-light: var(--text-light);
+$middle: var(--middle);
+
+$error: var(--error);
+$error-light: var(--error-light);

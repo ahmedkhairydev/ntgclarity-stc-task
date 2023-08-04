@@ -1,0 +1,60 @@
+button {
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .mat-button-focus-overlay {
+    background: $white;
+  }
+}
+
+.btn-disabled {
+  background-color: transparent !important;
+}
+
+.main-btn {
+  border-radius: 0 !important;
+  min-height: 30px;
+  height: 30px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+
+  --mat-mdc-button-persistent-ripple-color: transparent;
+
+  &:disabled {
+    color: $white !important;
+    background-color: $btn-disabled-bg !important;
+  }
+
+  &.white {
+    background-color: $white;
+    color: $primary;
+  }
+
+  &.primary {
+    --mdc-filled-button-container-color: #{$primary};
+    --mdc-filled-button-label-text-color: #{$white};
+  }
+
+  &.secondary {
+    --mdc-filled-button-container-color: #{$secondary};
+    --mdc-filled-button-label-text-color: #{$white};
+
+    &:disabled {
+      background-color: $btn-disabled-bg;
+      color: #ccc;
+    }
+  }
+
+  .mat-button-wrapper {
+    display: flex;
+    width: 100%;
+    line-height: 32px;
+  }
+
+  .mdc-button__label {
+    line-height: 1.5;
+  }
+}
