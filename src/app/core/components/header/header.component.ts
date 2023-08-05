@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { TranslationService } from 'core/services';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  private translateService = inject(TranslationService);
 
+  isEnglish = false;
+  
+  changeLanguage() {
+    this.translateService.changeLanguage();
+  }
 }

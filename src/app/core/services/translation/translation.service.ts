@@ -56,13 +56,13 @@ export class TranslationService {
   }
 
   private handleBasicLogic() {
-    if (this.isEnglish) {
-      this.renderer.removeClass(document.body, 'rtl');
-      this.renderer.setAttribute(document.body, 'dir', 'ltr');
-      this.currentLanguage.next(this.language);
-    } else {
+    if (this.language === 'ar') {
       this.renderer.addClass(document.body, 'rtl');
       this.renderer.setAttribute(document.body, 'dir', 'rtl');
+      this.currentLanguage.next(this.language);
+    } else {
+      this.renderer.removeClass(document.body, 'rtl');
+      this.renderer.setAttribute(document.body, 'dir', 'ltr');
       this.currentLanguage.next(this.language);
     }
   }

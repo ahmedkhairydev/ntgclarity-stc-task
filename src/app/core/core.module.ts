@@ -7,6 +7,7 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 
 import { HeaderComponent, LayoutComponent } from './components';
 import { BaseModule } from 'shared/sub-modules/base/base.module';
+import { ButtonComponent } from 'shared/components';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { BaseModule } from 'shared/sub-modules/base/base.module';
   providers: [TranslateService],
   imports: [
     CommonModule,
+    ButtonComponent,
     BaseModule,
     ToastrModule.forRoot(),
     TranslateModule.forRoot({
