@@ -80,6 +80,14 @@
   }
 }
 
+.w-25 {
+  width: 90% !important;
+
+  @include small-screen {
+    width: 25% !important;
+  }
+}
+
 .bottom-0 {
   bottom: 0;
 }
@@ -112,6 +120,11 @@
   &.bottom {
     border-inline: none !important;
     border-top: none !important;
+  }
+
+  &.top {
+    border-inline: none !important;
+    border-bottom: none !important;
   }
 }
 
