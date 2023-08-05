@@ -4,7 +4,6 @@ import { LayoutComponent } from './core/components';
 import { authGuard, userGuard, adminGuard, loginGuard } from './core/guards';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: '',
     component: LayoutComponent,

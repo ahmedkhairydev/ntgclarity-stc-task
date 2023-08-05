@@ -8,15 +8,15 @@ export class AuthService {
 
   constructor() { }
 
-  get userCredential(): User | null {
-    const userCredential = localStorage.getItem('userCredential');
+  get userCredentials(): User | null {
+    const userCredentials = localStorage.getItem('userCredentials');
 
-    if (!userCredential) return null;
-    return JSON.parse(userCredential);
+    if (!userCredentials) return null;
+    return JSON.parse(userCredentials);
   }
 
   get isUserLoggedIn() {
-    if (this.userCredential) return true;
+    if (this.userCredentials) return true;
 
     return false;
   }

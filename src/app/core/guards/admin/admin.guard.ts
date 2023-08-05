@@ -1,5 +1,17 @@
-import { CanActivateFn } from '@angular/router';
+import { inject } from '@angular/core';
+import { CanActivateFn, Router } from '@angular/router';
+import { UserRole } from 'core/enums/user-role';
 
 export const adminGuard: CanActivateFn = (route, state) => {
-  return true;
+  const router = inject(Router);
+  const userCredentials = localStorage.getItem('userCredentials') as string;
+
+  const isAdmin = JSON.parse(userCredentials).role === UserRole.admin;
+
+  if (isAdmin) {
+    return true;
+  }
+
+  router.navigateByUrl('/');
+  return false;
 };

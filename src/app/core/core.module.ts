@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 
 import { HeaderComponent, LayoutComponent } from './components';
 import { BaseModule } from 'shared/sub-modules/base/base.module';
@@ -13,6 +13,7 @@ import { BaseModule } from 'shared/sub-modules/base/base.module';
     LayoutComponent,
     HeaderComponent
   ],
+  providers: [TranslateService],
   imports: [
     CommonModule,
     BaseModule,
