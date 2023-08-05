@@ -25,7 +25,7 @@ export class LoginService {
   ];
 
   login(userCredentials: Pick<User, 'username' | 'password'>): boolean {
-    const user = this.users.find(user => user.username === userCredentials.username && user.password === userCredentials.password);
+    const user = this.users.find(user => user.username === userCredentials.username.toLowerCase() && user.password === userCredentials.password);
 
     if (!user) {
       this.alert.error(this.translation.instant('ALERT.USER_INVALID'));
