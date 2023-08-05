@@ -1,0 +1,17 @@
+{
+    "ACCOUNT": {
+        "LOGIN": "تسجيل الدخول",
+        "USERNAME": "إسم المستخدم",
+        "PASSWORD": "كلمة المرور"
+    },
+    "ALERT": {
+        "USER_INVALID": "Invalid User Credentials!",
+        "USER_LOGGED_IN": "Logged In Successfully!"
+    },
+    "required_validation": "هذا الحقل إجباري.",
+    "min_validation": "أقل قيمة ",
+    "max_validation": "أكبر قيمة ",
+    "minlength_validation": "الحد الأدنى ",
+    "maxlength_validation": "الحد الأقصى ",
+    "email_validation": "البريد الإلكترونى غير صحيح."
+}

@@ -1,0 +1,17 @@
+{
+    "ACCOUNT": {
+        "LOGIN": "Login",
+        "USERNAME": "Username",
+        "PASSWORD": "Password"
+    },
+    "ALERT": {
+        "USER_INVALID": "Invalid User Credentials!",
+        "USER_LOGGED_IN": "Logged In Successfully!"
+    },
+    "required_validation": "This field is required.",
+    "min_validation": "Min Value ",
+    "max_validation": "Max Value ",
+    "minlength_validation": "Min Length ",
+    "maxlength_validation": "Max Length ",
+    "email_validation": "Email isn't valid."
+}

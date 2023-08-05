@@ -1,0 +1,25 @@
+<div class="login-wrapper page-wrapper bg-page d-flex align-items-center justify-content-center h-100">
+    <div class="w-25 d-flex flex-column">
+
+        <div class="login-form box-shadow border-radius-8 bg-white">
+            <div class="login-form-header border bottom default p-3 pb-2">
+                <h1 class="font-22">{{ 'ACCOUNT.LOGIN' | translate }}</h1>
+            </div>
+
+            <div class="login-form-content px-3 pt-3">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    <app-text-box [formGroup]="loginForm" controlName="username" [label]="'ACCOUNT.USERNAME' | translate"></app-text-box>
+
+                    <app-text-box [formGroup]="loginForm" controlName="password" contentType="password" [label]="'ACCOUNT.PASSWORD' | translate">
+                    </app-text-box>
+                </form>
+            </div>
+
+            <div class="login-form-footer border top default p-3 pt-3 w-100">
+                <app-button class="w-100" btnClass="primary" type="submit" [disabled]="loginForm.invalid" (onClick)="login()">
+                    {{ 'ACCOUNT.LOGIN' | translate }}
+                </app-button>
+            </div>
+        </div>
+    </div>
+</div>
