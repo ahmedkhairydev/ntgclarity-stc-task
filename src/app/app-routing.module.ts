@@ -8,6 +8,7 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     canActivate: [authGuard],
+    pathMatch: 'full',
     children: [
       {
         path: '',

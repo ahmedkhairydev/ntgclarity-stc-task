@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '',
     component: ProductsComponent,
+    pathMatch: 'full',
     children: [
       {
         path: 'add',
