@@ -1,0 +1,39 @@
+{
+    "HOME": "الرئيسية",
+    "ACCOUNT": {
+        "LOGIN": "تسجيل الدخول",
+        "LOGOUT": "تسجيل الخروج",
+        "USERNAME": "إسم المستخدم",
+        "PASSWORD": "كلمة المرور"
+    },
+    "ALERT": {
+        "USER_INVALID": "Invalid User Credentials!",
+        "USER_LOGGED_IN": "Logged In Successfully!"
+    },
+    "PRODUCTS": {
+        "ADD": "إضافة منتج",
+        "EDIT": "تعديل منتج",
+        "TITLE": "عنوان المنتج",
+        "IMAGE": "عنوان URL لصورة المنتج",
+        "PRICE": "سعر المنتج",
+        "CATEGORY": "فئة المنتج",
+        "DESCRIPTION": "وصف المنتج"
+    },
+    "ACTIONS": {
+        "ADD": "إضافة",
+        "CANCEL": "إلغاء",
+        "SAVE": "حفظ"
+    },
+    "ERROR": {
+        "404": "الصفحة غير موجودة",
+        "403": "محظور",
+        "401": "غير مصرح لك بالدخول"
+    },
+    "required_validation": "هذا الحقل إجباري.",
+    "min_validation": "أقل قيمة ",
+    "max_validation": "أكبر قيمة ",
+    "minlength_validation": "الحد الأدنى ",
+    "maxlength_validation": "الحد الأقصى ",
+    "email_validation": "البريد الإلكترونى غير صحيح.",
+    "isURLValid_validation": "عنوان URL غير صالح."
+}

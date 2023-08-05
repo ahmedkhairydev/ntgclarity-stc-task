@@ -1,0 +1,39 @@
+{
+    "HOME": "Home",
+    "ACCOUNT": {
+        "LOGIN": "Login",
+        "LOGOUT": "LOGOUT",
+        "USERNAME": "Username",
+        "PASSWORD": "Password"
+    },
+    "ALERT": {
+        "USER_INVALID": "Invalid User Credentials!",
+        "USER_LOGGED_IN": "Logged In Successfully!"
+    },
+    "PRODUCTS": {
+        "ADD": "Add Product",
+        "EDIT": "Edit Product",
+        "TITLE": "Product Title",
+        "IMAGE": "Product Image URL",
+        "PRICE": "Product Price",
+        "CATEGORY": "Product Category",
+        "DESCRIPTION": "Product Description"
+    },
+    "ACTIONS": {
+        "ADD": "Add",
+        "CANCEL": "Cancel",
+        "SAVE": "Save"
+    },
+    "ERROR": {
+        "404": "PAGE NOT FOUND",
+        "403": "FORBIDDEN",
+        "401": "UNAUTHORIZED"
+    },
+    "required_validation": "This field is required.",
+    "min_validation": "Min Value ",
+    "max_validation": "Max Value ",
+    "minlength_validation": "Min Length ",
+    "maxlength_validation": "Max Length ",
+    "email_validation": "Email isn't valid.",
+    "isURLValid_validation": "The URL isn't valid."
+}
