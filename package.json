@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4100 -o",
-    "build": "ng build",
+    "build": "ng build --prod --base-href https://ahmedkhairydev.github.io/ntgclarity-stc-task/ ",
+    "deploy": "ng deploy --base-href https://ahmedkhairydev.github.io/ntgclarity-stc-task/ --repo=https://github.com/ahmedkhairydev/ntgclarity-stc-task.git --name=Ahmed",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -22,6 +23,7 @@
     "@angular/router": "^16.1.0",
     "@ngx-translate/core": "15.0.0",
     "@ngx-translate/http-loader": "8.0.0",
+    "angular-cli-ghpages": "1.0.6",
     "bootstrap": "5.3.1",
     "ngx-toastr": "17.0.2",
     "rxjs": "~7.8.0",
