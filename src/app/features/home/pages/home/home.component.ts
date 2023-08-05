@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Product } from 'core/interfaces';
 import { ProductsService } from 'core/services';
@@ -13,12 +14,12 @@ export class HomeComponent {
   private router = inject(Router);
   private activatedRoute = inject(ActivatedRoute);
   private productsServices = inject(ProductsService);
-  private destroy$ = new Subject();
+  private title = inject(Title);
+  private destroy$ = new Subject<boolean>();
 
   products!: Product[];
 
   constructor() {
-
     this.router.events.pipe(
       filter((event) => event instanceof NavigationEnd),
       distinctUntilChanged(),
@@ -31,6 +32,7 @@ export class HomeComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
+    this.title.setTitle(`STC E-Commerce | Home`);
     const categoryName = this.activatedRoute.snapshot.queryParamMap.get('categoryName');
 
     if (categoryName) this.getProductsByCategory(categoryName);

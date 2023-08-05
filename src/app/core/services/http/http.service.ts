@@ -27,7 +27,7 @@ export abstract class HttpService {
   }
 
   post<T>(API_Config: API_Config) {
-    return this.http.post<T>(`${this.domainName}${this.baseUrl}${API_Config.APIName}`, JSON.stringify(API_Config.body), { params: API_Config.params })
+    return this.http.post<T>(`${this.domainName}${this.baseUrl}${API_Config.APIName || ''}`, JSON.stringify(API_Config.body), { params: API_Config.params })
       .pipe(map(event => {
         return event;
       }));

@@ -48,7 +48,7 @@ body {
   max-height: 90vh !important;
 
   .mat-mdc-dialog-container {
-    --mdc-dialog-subhead-font: "Cairo";
+    --mdc-dialog-subhead-font: var(--main-font);
 
     min-width: 90%;
     max-height: 90vh;

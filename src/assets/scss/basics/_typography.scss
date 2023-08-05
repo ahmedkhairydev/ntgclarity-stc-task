@@ -1,5 +1,5 @@
 /* Project Fonts */
-$font-regular: "Roboto", sans-serif;
+$font-regular: var(--main-font);
 
 body {
   font-family: $font-regular;
