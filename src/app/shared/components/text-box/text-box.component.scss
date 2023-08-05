@@ -1,4 +1,4 @@
-::ng-deep del-input-text {
+::ng-deep app-text-box {
     .mat-mdc-form-field-icon-prefix {
         padding: 0;
     }
@@ -14,7 +14,7 @@
     }
 
     .mdc-text-field--outlined {
-        --mdc-theme-primary: var(--secondary);
+        --mdc-theme-primary: var(--dark);
     }
 
     .mat-mdc-form-field-has-icon-prefix .mat-mdc-text-field-wrapper {

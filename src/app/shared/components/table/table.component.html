@@ -1,0 +1,28 @@
+<mat-table [dataSource]="rows" [dataSource]="rows" *ngIf="columns$.length">
+    <ng-container [matColumnDef]="column.rowPropertyName" *ngFor="let column of columns$">
+        <mat-header-cell mat-header-cell *matHeaderCellDef>
+            <span class="text-capitalize text-truncate">{{ column.title | translate }}</span>
+        </mat-header-cell>
+
+        <mat-cell mat-cell *matCellDef="let element">
+            <span class="text-truncate" [matTooltip]="element[column.rowPropertyName]">
+                {{ element[column.rowPropertyName] }}
+            </span>
+        </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="action" [stickyEnd]="true" *ngIf="isColumnsHaveActions">
+        <mat-header-cell mat-header-cell *matHeaderCellDef>
+            <span class="d-flex justify-content-end w-100">
+                {{ actionColumn!.title | translate }}
+            </span>
+        </mat-header-cell>
+
+        <mat-cell mat-cell *matCellDef="let element">
+            <ng-template [ngTemplateOutlet]="actionTemplateRef" [ngTemplateOutletContext]="{ $implicit: element }"></ng-template>
+        </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

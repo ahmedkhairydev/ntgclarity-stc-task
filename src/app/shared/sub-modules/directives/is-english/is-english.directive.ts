@@ -8,7 +8,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class IsEnglishDirective {
   private translation = inject(TranslationService);
-  private destroy$ = new Subject<any>();
+  private destroy$ = new Subject<boolean>();
 
   @Output() isEnglish = new EventEmitter<any>();
 

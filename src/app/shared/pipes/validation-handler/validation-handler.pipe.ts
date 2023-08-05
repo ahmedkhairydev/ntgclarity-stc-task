@@ -8,7 +8,7 @@ import { Subject, takeUntil } from 'rxjs';
 })
 export class ValidationHandlerPipe implements PipeTransform {
 
-  private destroy$ = new Subject<any>();
+  private destroy$ = new Subject<boolean>();
   private translate = inject(TranslateService);
 
   transform(value: any, customErrorMessage?: string): string {
