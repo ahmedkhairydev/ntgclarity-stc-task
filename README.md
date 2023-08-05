@@ -18,7 +18,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Deploy
 
-Run `npm run deploy` to deploy the project. The project URL will be `https://ahmedkhairydev.github.io/ntgclarity-stc-task/`
+Run `npm run deploy` to deploy the project. The project URL will be [https://ahmedkhairydev.github.io/ntgclarity-stc-task/](https://ahmedkhairydev.github.io/ntgclarity-stc-task/)
 
 ## Running unit tests
 
