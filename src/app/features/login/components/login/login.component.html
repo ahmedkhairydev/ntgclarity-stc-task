@@ -20,19 +20,21 @@
                 <h1 class="font-22">{{ 'ACCOUNT.LOGIN' | translate }}</h1>
             </div>
 
-            <div class="login-form-content px-3 pt-3">
+            <div class="login-form-content">
                 <form [formGroup]="loginForm" (ngSubmit)="login()">
-                    <app-text-box [formGroup]="loginForm" controlName="username" [label]="'ACCOUNT.USERNAME' | translate"></app-text-box>
+                    <div class="px-3 pt-3">
+                        <app-text-box [formGroup]="loginForm" controlName="username" [label]="'ACCOUNT.USERNAME' | translate"></app-text-box>
+    
+                        <app-text-box [formGroup]="loginForm" controlName="password" contentType="password" [label]="'ACCOUNT.PASSWORD' | translate">
+                        </app-text-box>
+                    </div>
 
-                    <app-text-box [formGroup]="loginForm" controlName="password" contentType="password" [label]="'ACCOUNT.PASSWORD' | translate">
-                    </app-text-box>
+                    <div class="login-form-footer border top default p-3 pt-3 w-100">
+                        <app-button class="w-100" btnClass="primary" type="submit" [disabled]="loginForm.invalid">
+                            {{ 'ACCOUNT.LOGIN' | translate }}
+                        </app-button>
+                    </div>
                 </form>
-            </div>
-
-            <div class="login-form-footer border top default p-3 pt-3 w-100">
-                <app-button class="w-100" btnClass="primary" type="submit" [disabled]="loginForm.invalid" (onClick)="login()">
-                    {{ 'ACCOUNT.LOGIN' | translate }}
-                </app-button>
             </div>
         </div>
     </div>
