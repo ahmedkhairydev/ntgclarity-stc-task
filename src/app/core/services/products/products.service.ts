@@ -10,8 +10,8 @@ export class ProductsService extends HttpService {
     return 'products';
   }
 
-  getProducts(limit = '12') {
-    return this.get<Product[]>({ params: { limit } });
+  get products() {
+    return this.get<Product[]>();
   }
 
   get categories() {

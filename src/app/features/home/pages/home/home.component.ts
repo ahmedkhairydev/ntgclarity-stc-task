@@ -31,11 +31,14 @@ export class HomeComponent {
   ngOnInit(): void {
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
-    this.getProducts();
+    const categoryName = this.activatedRoute.snapshot.queryParamMap.get('categoryName');
+
+    if (categoryName) this.getProductsByCategory(categoryName);
+    else this.getProducts();
   }
 
   getProducts() {
-    this.productsServices.getProducts().subscribe(products => this.products = products);
+    this.productsServices.products.subscribe(products => this.products = products);
   }
 
   getProductsByCategory(categoryName: string | null) {

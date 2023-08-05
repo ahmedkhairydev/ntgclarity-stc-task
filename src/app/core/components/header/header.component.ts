@@ -14,4 +14,8 @@ export class HeaderComponent {
   changeLanguage() {
     this.translateService.changeLanguage();
   }
+
+  logOut() {
+    localStorage.clear();
+  }
 }
