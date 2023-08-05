@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center justify-content-center pt-3 px-3 w-100" *ngIf="features.length">
+    <div class="overflow-auto">
+        <mat-list class="d-flex align-items-center p-0" role="list">
+            <mat-list-item role="listitem" class="px-1 overflow-visible" *ngFor="let feature of features">
+                <a [routerLink]="feature" routerLinkActive #matLink="routerLinkActive">
+                    <app-button btnClass="h-40 text-capitalize font-16 {{ matLink.isActive ? 'primary' : '' }}">
+                        {{ feature }}
+                    </app-button>
+                </a>
+            </mat-list-item>
+        </mat-list>
+    </div>
+</div>

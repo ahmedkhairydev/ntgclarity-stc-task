@@ -1,0 +1,53 @@
+<div class="modal-container d-flex flex-column" *ngIf="productForm">
+    <div class="modal-header bg-header" mat-dialog-header>
+        <h1 class="m-0 p-0 font-22 regular text-primary" mat-dialog-title>{{ pageTitle | translate }}</h1>
+    </div>
+
+    <div class="px-4 py-2 m-0 bg-light" mat-dialog-content>
+        <form method="post" [formGroup]="productForm">
+            <div class="row mt-3">
+                <!-- title -->
+                <div class="col-12">
+                    <app-text-box [formGroup]="productForm" controlName="title" appearance="outline" [label]="'PRODUCTS.TITLE' | translate">
+                    </app-text-box>
+                </div>
+
+                <!-- image -->
+                <div class="col-12">
+                    <app-text-box [formGroup]="productForm" controlName="image" appearance="outline" [label]="'PRODUCTS.IMAGE' | translate">
+                    </app-text-box>
+                </div>
+
+                <!-- category -->
+                <div class="col-md-6">
+                    <app-text-box [formGroup]="productForm" controlName="category" appearance="outline" [label]="'PRODUCTS.CATEGORY' | translate">
+                    </app-text-box>
+                </div>
+
+                <!-- price -->
+                <div class="col-md-6">
+                    <app-text-box [formGroup]="productForm" controlName="price" appearance="outline" contentType="number"
+                                  [label]="'PRODUCTS.PRICE' | translate">
+                    </app-text-box>
+                </div>
+
+                <!-- description -->
+                <div class="col-12">
+                    <app-text-box [formGroup]="productForm" controlName="description" appearance="outline" contentType="number" inputType="textarea"
+                                  [label]="'PRODUCTS.DESCRIPTION' | translate">
+                    </app-text-box>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal-footer w-100 d-flex justify-content-end gap-3" mat-dialog-actions>
+        <app-button btnClass="text-secondary font-16 px-5" mat-dialog-close>
+            {{ 'ACTIONS.CANCEL' | translate }}
+        </app-button>
+
+        <app-button btnClass="primary font-16 px-5" type="submit" [disabled]="productForm.invalid" (onClick)="submit()">
+            {{ 'ACTIONS.SAVE' | translate }}
+        </app-button>
+    </div>
+</div>
