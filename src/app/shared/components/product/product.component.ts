@@ -4,11 +4,12 @@ import { Product } from 'core/interfaces';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { DirectivesModule } from 'shared/sub-modules/directives/directives.module';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-product',
   standalone: true,
-  imports: [CommonModule, TranslateModule, DirectivesModule, MatTooltipModule],
+  imports: [CommonModule, TranslateModule, DirectivesModule, MatTooltipModule, NgOptimizedImage],
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })

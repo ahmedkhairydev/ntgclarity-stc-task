@@ -1,7 +1,7 @@
 <div class="product-card cursor-pointer bg-white border-radius-8 p-2" (isEnglish)="isEnglish = $event">
     <div class="img-box position-relative overflow-hidden">
         <a class="primary-img d-block">
-            <img class="p-1" [src]="product.image" [alt]="product.title + '\'s Image'"
+            <img class="p-1" [ngSrc]="product.image" [alt]="product.title + '\'s Image'" width="300" height="250" loading="lazy"
                  (error)="product.image = 'assets/images/common/Product_Image_Placeholder.png'" />
         </a>
 
