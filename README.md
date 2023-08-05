@@ -4,6 +4,22 @@ This project for NTG Clarity - STC opportunity.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.7.
 
+## User Credentials
+
+You can use these users for login into the project.
+
+- ## Admin User
+   ```
+    username: admin
+    paswword: 12345678
+   ```
+
+- ## Regular User
+   ```
+    username: user1
+    paswword: 12345678
+   ```
+
 ## Development server
 
 Run `npm start` for a dev server. The application will automatically open nad reload if you change any of the source files.
