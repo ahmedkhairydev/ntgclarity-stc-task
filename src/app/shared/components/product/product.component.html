@@ -1,0 +1,51 @@
+<div class="product-card cursor-pointer bg-white border-radius-8 p-2" (isEnglish)="isEnglish = $event">
+    <div class="img-box position-relative overflow-hidden">
+        <a class="primary-img d-block">
+            <img class="p-1" [src]="product.image" [alt]="product.title + '\'s Image'"
+                 (error)="product.image = 'assets/images/common/Product_Image_Placeholder.png'" />
+        </a>
+
+        <!-- Rating -->
+        <div class="rating py-2 d-inline-flex align-items-center gap-0">
+            <span class="stars px-2 d-flex align-items-center gap-1 font-14">
+                {{ product.rating.rate }}
+
+                <svg class="text-primary" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="14" height="14">
+                    <path fill-rule="evenodd"
+                          d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                          clip-rule="evenodd" />
+                </svg>
+            </span>
+
+            <!-- reviews count -->
+            <span class="px-2 d-flex align-items-center gap-1 font-14">{{ product.rating.count }}</span>
+        </div>
+
+        <!-- actions -->
+        <div class="quick-actions position-absolute" setRtl>
+            <ng-content></ng-content>
+        </div>
+    </div>
+
+    <!-- Content Box -->
+    <div class="content-box pt-2">
+        <a class="text-dark text-decoration-none">
+            <!-- category name -->
+            <p class="text-capitalize text-middle font-14 px-1 mb-1">
+                {{ product.category }}
+            </p>
+
+            <h2 class="regular font-18 text-truncate fw-normal m-0 mb-2 px-1" [matTooltip]="product.title">
+                {{ product.title }}
+            </h2>
+
+            <p class="description text-capitalize text-middle font-14 px-1 mb-2" [matTooltip]="product.description">
+                {{ product.description }}
+            </p>
+
+            <span class="d-flex align-content-center font-18 fw-bold px-1">
+                <span>{{ formatNumber(product.price) }}</span>
+            </span>
+        </a>
+    </div>
+</div>

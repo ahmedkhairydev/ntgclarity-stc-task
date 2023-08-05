@@ -8,11 +8,13 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { HeaderComponent, LayoutComponent } from './components';
 import { BaseModule } from 'shared/sub-modules/base/base.module';
 import { ButtonComponent } from 'shared/components';
+import { LoadingComponent } from './components/loading/loading.component';
 
 @NgModule({
   declarations: [
     LayoutComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoadingComponent
   ],
   providers: [TranslateService],
   imports: [

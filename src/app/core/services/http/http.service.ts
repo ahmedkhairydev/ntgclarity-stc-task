@@ -19,8 +19,8 @@ export abstract class HttpService {
   private domainName = environment.HOST_API;
   private http = inject(HttpClient);
 
-  get<T>(API_Config: API_Config) {
-    return this.http.get<T>(`${this.domainName}${this.baseUrl}${API_Config.APIName}`, { params: API_Config.params })
+  get<T>(API_Config?: API_Config) {
+    return this.http.get<T>(`${this.domainName}${this.baseUrl}${API_Config?.APIName || ''}`, { params: API_Config?.params })
       .pipe(map(event => {
         return event;
       }));

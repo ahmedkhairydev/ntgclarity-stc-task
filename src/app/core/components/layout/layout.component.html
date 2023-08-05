@@ -5,3 +5,5 @@
         <router-outlet></router-outlet>
     </section>
 </main>
+
+<app-loading *ngIf="(isLoading | async)"></app-loading>

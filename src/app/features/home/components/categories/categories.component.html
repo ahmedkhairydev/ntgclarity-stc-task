@@ -1,0 +1,9 @@
+<div class="d-flex align-items-center justify-content-center pt-3" *ngIf="categories.length">
+    <mat-list class="d-flex flex-column flex-xl-row align-items-center p-0" role="list">
+        <mat-list-item role="listitem" class="px-1 overflow-visible" (click)="getProductsByCategory(category)" *ngFor="let category of categories">
+            <app-button btnClass="h-40 text-capitalize font-16 {{ isActiveCategory(category) ? 'primary' : '' }}">
+                {{ category }}
+            </app-button>
+        </mat-list-item>
+    </mat-list>
+</div>

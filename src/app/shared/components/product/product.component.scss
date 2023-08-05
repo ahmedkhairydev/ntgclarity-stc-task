@@ -1,0 +1,64 @@
+@import "style";
+
+::ng-deep.product-card {
+    transition: all 0.5s ease;
+    box-shadow: 0 0 7px 0px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        .img-box {
+            .quick-actions {
+                opacity: 1;
+                right: 7px;
+
+                &.rtl {
+                    right: unset;
+                    left: 7px;
+                }
+            }
+        }
+    }
+
+    .img-box {
+        .primary-img {
+            img {
+                width: 100%;
+                height: 250px;
+                min-height: 250px;
+                object-fit: contain;
+            }
+        }
+
+        .rating {
+            left: .5rem;
+            bottom: .5rem;
+            backdrop-filter: blur(4px);
+
+            .stars {
+                border-inline-end: 1px solid rgba(82, 82, 82, 0.2);
+            }
+        }
+
+        .quick-actions {
+            top: 7px;
+            right: -64px;
+            opacity: 0;
+            z-index: 2;
+            transition: all 0.5s ease;
+            list-style: none;
+
+            &.rtl {
+                right: unset;
+                left: -64px;
+            }
+        }
+    }
+
+    .content-box {
+        .description {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
