@@ -9,6 +9,11 @@ export const authGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
+  if (state.url.includes('admin')) {
+    router.navigateByUrl('/error/401');
+    return false;
+  }
+
   router.navigateByUrl('/login');
   return false;
 };

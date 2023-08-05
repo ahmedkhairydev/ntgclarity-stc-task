@@ -26,7 +26,11 @@ const routes: Routes = [
     canActivate: [loginGuard],
     loadChildren: () => import('./features/login/login.module').then(m => m.LoginModule)
   },
-  { path: 'error', loadChildren: () => import('./features/error/error.module').then(m => m.ErrorModule) },
+  {
+    path: 'error/:errorNumber',
+    data: { acceptiableStatuses: ['401', '403', '404'] },
+    loadComponent: () => import('./features/error/error.component').then(m => m.ErrorComponent)
+  },
   { path: '**', redirectTo: '/error/404' }
 ];
 

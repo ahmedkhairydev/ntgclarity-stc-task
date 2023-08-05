@@ -1,4 +1,5 @@
 {
+    "HOME": "Home",
     "ACCOUNT": {
         "LOGIN": "Login",
         "LOGOUT": "LOGOUT",
@@ -22,6 +23,11 @@
         "ADD": "Add",
         "CANCEL": "Cancel",
         "SAVE": "Save"
+    },
+    "ERROR": {
+        "404": "PAGE NOT FOUND",
+        "403": "FORBIDDEN",
+        "401": "UNAUTHORIZED"
     },
     "required_validation": "This field is required.",
     "min_validation": "Min Value ",

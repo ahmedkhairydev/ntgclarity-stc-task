@@ -12,6 +12,6 @@ export const adminGuard: CanActivateFn = (route, state) => {
     return true;
   }
 
-  router.navigateByUrl('/');
+  router.navigateByUrl('/error/403');
   return false;
 };
