@@ -5,7 +5,6 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'core/interfaces';
 import { ProductsService } from 'core/services';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-add-edit-product',
@@ -17,7 +16,6 @@ export class AddEditProductComponent {
   private title = inject(Title);
   private productsServices = inject(ProductsService);
   private dialogRef = inject(MatDialogRef<AddEditProductComponent>);
-  private destroy$ = new Subject<boolean>();
 
   isEdit = false;
   pageTitle!: string;
@@ -82,13 +80,5 @@ export class AddEditProductComponent {
     return {
       isURLValid
     };
-  }
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-    this.destroy$.next(true);
-    this.destroy$.complete();
-    this.destroy$.unsubscribe();
   }
 }
